@@ -5,6 +5,7 @@ With this release InfluxDB is moving to Go 1.5.
 
 ### Features
 - [#3863](https://github.com/influxdb/influxdb/pull/3863): Move to Go 1.5
+- [#3876](https://github.com/influxdb/influxdb/pull/3876): Allow the following syntax in CQs: INTO "1hPolicy".:MEASUREMENT
 
 ### Bugfixes
 - [#3804](https://github.com/influxdb/influxdb/pull/3804): init.d script fixes, fixes issue 3803.
