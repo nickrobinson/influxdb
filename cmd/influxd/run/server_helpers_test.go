@@ -157,6 +157,7 @@ func NewConfig() *run.Config {
 
 	c.Data.Dir = MustTempFile()
 	c.Data.WALDir = MustTempFile()
+	c.Data.WALEnableLogging = false
 
 	c.HintedHandoff.Dir = MustTempFile()
 
