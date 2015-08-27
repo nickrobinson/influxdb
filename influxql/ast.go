@@ -1501,6 +1501,9 @@ func (t *Target) String() string {
 	var buf bytes.Buffer
 	_, _ = buf.WriteString("INTO ")
 	_, _ = buf.WriteString(t.Measurement.String())
+	if t.Measurement.Name == "" {
+		_, _ = buf.WriteString(":MEASUREMENT")
+	}
 
 	return buf.String()
 }
@@ -2159,6 +2162,7 @@ type Measurement struct {
 	RetentionPolicy string
 	Name            string
 	Regex           *RegexLiteral
+	Parent          Node
 }
 
 // String returns a string representation of the measurement.
